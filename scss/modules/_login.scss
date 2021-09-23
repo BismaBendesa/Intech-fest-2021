@@ -1,0 +1,286 @@
+*{
+    margin : 0 ; 
+    padding: 0;
+    box-sizing: border-box;
+}
+.container10 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.6fr 2.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "login-form login-banner"
+    "login-form login-banner";
+}
+
+.login-form { grid-area: login-form; }
+
+.login-banner { grid-area: login-banner; }
+//   -----------------------------------------------
+
+.container10{
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    // padding: 10px 40px;
+}
+
+.login-form{
+    padding: 10px 40px;
+    .navigation-login{
+        @include flexbox(row, space-between, center);
+        width: 100%;
+        padding-top: 20px;
+        .logo {
+            font-weight: bold;
+            font-size: 20px;
+            @include flexbox(row, flex-start, center);
+            a{
+                text-decoration: none;
+                background : $main-color-ver;
+                padding-left: 20px;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+    
+            .active {
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        .language-categories {
+            margin-left: 16px;
+            font-size: 13px;
+            padding: 13px 8px 13px 14px;
+            background: #fff;
+            border-radius: 8px;
+            position: relative;
+            background: $transparent-color;
+
+            .select {
+                width: 130%;
+                // background: url('arrow.png') no-repeat;
+                // background-position: 80% center;
+
+
+                select {
+                    background: transparent;
+                    line-height: 1;
+                    border: 0;
+                    padding: 0;
+                    border-radius: 0;
+                    width: 80%;
+                    position: relative;
+                    z-index: 10;
+                    font-size: 1em;
+                    background: $main-color-ver;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-weight: 600;
+                    border: none;
+
+
+                    #language-categories {
+                        option[value="INA"] {
+                            background-image: url(../../assets/Indoneian-flag.png);
+                        }
+
+                        option[value="ENG"] {
+                            background-image: url(../../assets/UK-flag.png);
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+}
+.login-title{
+    h3{
+        font-size: 18px;
+        background: $main-color-ver;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-top: 60px;
+    }
+    h1{
+        font-size: 50px;
+        width: 473px;
+        margin-top: 20px;
+        span{
+            background: $main-color-ver;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+.login-section{
+    margin-top: 40px;
+    .form-row{
+        input{
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            width: 451px;
+            height: 48px;
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid rgba($color: #000000, $alpha: .3);
+            &:focus{
+                outline: none;
+            }
+        }
+        p{
+            font-size: 14px;
+            a{
+                background: $main-color-ver;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                text-decoration: none;
+            }
+        }
+        button{
+            padding: 17px 30px;
+            background: $main-color-ver;
+            border: none;
+            border-radius: 16px;
+            font-size: 18px;
+            color: #fff;
+            margin-top: 35px;
+            cursor: pointer;
+            a{
+                text-decoration: none;
+                color: #fff;
+                display: inline-block;
+            }
+        }
+        li{
+            display: inline;
+            text-decoration: none;
+        }
+        #clickHere{
+            a{
+                text-decoration: none;
+                font-size: 14px;
+                background: $main-color-hor;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.login-banner{
+    background : $main-color-hor;
+    height: 100%;
+    color: #fff;
+    h1{
+        color: #fff;
+        padding-left: 30px;
+        span{
+            color: #fff;
+            font-size: 127px;
+            display: block;
+        }
+        font-size: 64px;
+        width: 600px;
+    }
+    .login-banner-img{
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 1099px){
+    .container10 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.6fr ;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "login-form"
+        "login-form";
+    }
+    .login-banner{
+        display: none;
+    }
+}
+
+@media (max-width: 526px){
+    .container9{
+        overflow: scroll;
+    }
+    .login-form{
+        .navigation-login{
+            .logo{
+                font-size: 14px;
+                img{
+                    width: 15px;
+                }
+            }
+        }
+    }
+    .login-section{
+        margin-top: 40px;
+        .form-row{
+            input{
+                display: block;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                width: 300px;
+                height: 48px;
+                padding: 20px;
+                border-radius: 16px;
+                border: 1px solid rgba($color: #000000, $alpha: .3);
+                &:focus{
+                    outline: none;
+                }
+            }
+            p{
+                font-size: 14px;
+                a{
+                    background: $main-color-ver;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                }
+            }
+            button{
+                padding: 15px 20px;
+                background: $main-color-ver;
+                border: none;
+                border-radius: 16px;
+                font-size: 14px;
+                color: #fff;
+                margin-top: 35px;
+                cursor: pointer;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .login-title{
+        h3{
+            font-size: 18px;
+            background: $main-color-ver;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 20px;
+        }
+        h1{
+            margin-top: 20px;
+            font-size: 40px;
+            width: 300px;
+            span{
+                background: $main-color-ver;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+}

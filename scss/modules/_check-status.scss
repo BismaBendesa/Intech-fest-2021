@@ -1,0 +1,351 @@
+.container8 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1.3fr 2.4fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "navigation-check-status navigation-check-status navigation-check-status navigation-check-status"
+        "check-status-vaccinate-title check-status-vaccinate-title check-status-vaccinate-title check-status-vaccinate-title"
+        "check-status-vaccinate-form check-status-vaccinate-form check-status-vaccinate-form check-status-vaccinate-form";
+}
+.navigation-check-status {
+    grid-area: navigation-check-status;
+}
+
+.check-status-vaccinate-title {
+    grid-area: check-status-vaccinate-title;
+}
+
+.check-status-vaccinate-form {
+    grid-area: check-status-vaccinate-form;
+}
+
+// ----------------------------------------------
+
+.container8{
+    width: 85%;
+    margin: auto;
+}
+
+.navigation-check-status {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "logo navigation-items navigation-items nav-button"
+}
+
+// header style
+.navigation-check-status {
+    @include flexbox(row, space-between, center);
+    width: 100%;
+    padding-top: 20px;
+
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        width: 160px;
+        background-color: #FCF7F7;
+        top : 100px;
+        right: 40px;
+        box-shadow: 1px 1px 10px rgba($color: #000000, $alpha: .3);
+        a{
+            display: block;
+            text-decoration: none;
+            margin-bottom: 10px;
+            text-align: center;
+            padding: 15px;
+            &:hover{
+                background: #c4c4c4;
+            }
+        }
+    }
+
+    .logo {
+        font-weight: bold;
+        font-size: 20px;
+        @include flexbox(row, flex-start, center);
+
+        .active {
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    img {
+        padding-right: 20px;
+    }
+
+    span {
+        display: inline-block;
+        background: $main-color-hor;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+
+    .navigation-items {
+        ul {
+            @include flexbox(row, flex-start, center);
+
+            a {
+                text-decoration: none;
+
+                &.active {
+                    background: $main-color-hor;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-weight: 600;
+                }
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    padding-left: 60px;
+                }
+
+                li {
+                    list-style: none;
+
+                }
+            }
+        }
+    }
+
+    .menu-dropdown {
+        display: none;
+    }
+
+    .nav-button {
+        @include flexbox(row, center, center);
+
+        .login {
+            button {
+                width: 92px;
+                height: 45px;
+                border: none;
+                background: $transparent-color;
+                border-radius: 8px;
+                font-size: 16px;
+                cursor: pointer;
+
+                span {
+                    background-color: $main-color-ver;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .language-categories {
+            margin-left: 16px;
+            font-size: 13px;
+            padding: 13px 8px 13px 14px;
+            background: #fff;
+            border-radius: 8px;
+            position: relative;
+            background: $transparent-color;
+
+            .select {
+                width: 130%;
+                // background: url('arrow.png') no-repeat;
+                // background-position: 80% center;
+
+
+                select {
+                    background: transparent;
+                    line-height: 1;
+                    border: 0;
+                    padding: 0;
+                    border-radius: 0;
+                    width: 80%;
+                    position: relative;
+                    z-index: 10;
+                    font-size: 1em;
+                    background: $main-color-ver;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-weight: 600;
+                    border: none;
+
+
+                    #language-categories {
+                        option[value="INA"] {
+                            background-image: url(../../assets/Indoneian-flag.png);
+                        }
+
+                        option[value="ENG"] {
+                            background-image: url(../../assets/UK-flag.png);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.check-status-vaccinate-title{
+    text-align: center;
+    h1{
+        font-size: 48px;
+        background: $main-color-ver;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-top: 73px;
+    }
+    span{
+        display: inline-block;
+        font-size: 18px;
+        margin-top: 25px;
+    }
+    p{
+        width: 410px;
+        color: rgba($color: #000000, $alpha: 0.5);
+        font-size: 14px;
+        margin: 30px auto 50px auto;
+    }
+}
+
+.check-status-vaccinate-form {
+    form{
+        .form-row{
+            width: 37%;
+            margin: auto;
+            label{
+                display: block;
+                font-size: 18px;
+            }
+            input{
+                display: block;
+                width: 590px;
+                height: 52px;
+                border: 1px solid rgba($color: #000000, $alpha: .3);
+                border-radius: 16px;
+                padding: 20px;
+                margin:  20px auto;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        .button{
+            button{
+                padding : 17px 30px;
+                background : $main-color-hor;
+                border : none;
+                font-size: 18px;
+                color: #fff;
+                border-radius: 16px;
+                margin-top: 50px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media(max-width: 1353px){
+    .check-status-vaccinate-form{
+        form {
+            .form-row{
+                width: 55%;
+            }
+        }
+    }
+}
+@media(max-width: 971px){
+    .check-status-vaccinate-form{
+        form {
+            .form-row{
+                width: 73%;
+            }
+        }
+    }
+}
+
+@media(max-width: 871px){
+    .navigation-check-status{
+        .menu-dropdown {
+            display: block;
+
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .navigation-items {
+            display: none;
+        }
+
+        .nav-button {
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 815px){
+    .check-status-vaccinate-form{
+        form {
+            .form-row{
+                width: 83%;
+            }
+        }
+    }
+}
+@media(max-width: 710px){
+    .check-status-vaccinate-form{
+        form {
+            .form-row{
+                width: 100%;
+            }
+        }
+    }
+}
+@media(max-width: 664px){
+    .check-status-vaccinate-form{
+        form {
+            .form-row{
+                width: 100%;
+                margin: auto;
+                label{
+                    display: block;
+                    font-size: 14px;
+                }
+                input{
+                    display: block;
+                    width: 300px;
+                    height: 42px;
+                    border: 1px solid rgba($color: #000000, $alpha: .3);
+                    border-radius: 16px;
+                    padding: 20px;
+                    margin:  20px 0 ;
+                    
+                }
+            }
+            .button{
+                button{
+                    padding : 14px 20px;
+                    background : $main-color-hor;
+                    border : none;
+                    font-size: 14px;
+                    color: #fff;
+                    border-radius: 16px;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 500px){
+    .check-status-vaccinate-title{
+        h1{
+            margin-top: 40px    ;
+        }
+        p{
+            width: 300px;
+        }
+    }
+}

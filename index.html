@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Landing Page</title>
+    <!-- aos animation -->
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <div class="container" id="container">
+        <div class="navigation">
+            <div class="logo">
+                <img src="assets/logo.png" alt="logo sehat">
+                <a href="index.html"><span class="logo-text">Sehat!</span></a>
+            </div>
+            <div class="navigation-items" id="navigation-items">
+                <ul>
+                    <a href="index.html" class="active"><li id="home">Beranda</li></a>
+                    <a href="html/register-vaccinate.html"><li id="onlineVac">Vaksinasi Online</li></a>
+                    <a href="html/check-status.html"><li id="checkStatus">Cek Status</li></a>
+                </ul>
+            </div>
+            <div class="menu-dropdown" id="menu-dropdown">
+                <svg  viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.83333 12.75H14.1667C14.5562 12.75 14.875 12.4312 14.875 12.0417C14.875 11.6521 14.5562 11.3333 14.1667 11.3333H2.83333C2.44375 11.3333 2.125 11.6521 2.125 12.0417C2.125 12.4312 2.44375 12.75 2.83333 12.75ZM2.83333 9.20833H14.1667C14.5562 9.20833 14.875 8.88958 14.875 8.5C14.875 8.11042 14.5562 7.79167 14.1667 7.79167H2.83333C2.44375 7.79167 2.125 8.11042 2.125 8.5C2.125 8.88958 2.44375 9.20833 2.83333 9.20833ZM2.125 4.95833C2.125 5.34792 2.44375 5.66667 2.83333 5.66667H14.1667C14.5562 5.66667 14.875 5.34792 14.875 4.95833C14.875 4.56875 14.5562 4.25 14.1667 4.25H2.83333C2.44375 4.25 2.125 4.56875 2.125 4.95833Z" fill="url(#paint0_linear)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear" x1="8.5" y1="4.25" x2="8.5" y2="12.75" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#AB21FC"/>
+                    <stop offset="1" stop-color="#29B6D3"/>
+                    </linearGradient>
+                    </defs>
+                    </svg>
+                <div class="dropdown-content" id="dropdown-content">
+                    <a href="index.html" class="active" id="home">Beranda</a>
+                    <a href="html/register-vaccinate.html">Vaksinasi Online</a>
+                    <a href="html/check-status.html">Cek Status</a>
+                    <a href="html/login.html">Masuk</a>
+                </div>
+            </div>
+            <div class="nav-button">
+                <div class="login">
+                    <a href="html/login.html"><button> <span id="login">Masuk</span> </button></a>
+                </div>
+                <div class="language-dropdodwn">
+                    <div class="language-categories">
+                        <div class="select">
+                            <select name="language-categories" id="language-categories" onchange="getLanguageValue()">
+                                <option value="INA" href="#ina" data-reload> <a href="#ina"> INA</a></option>
+                                <option value="ENG" href="#eng" data-reload> <a href="#eng"> ENG</a></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="left-section">
+                <h1 
+                data-aos="fade-in"
+                data-aos-duration="1500"
+                data-aos-once = "false" id="pandemic">
+                Mewujudkan Pandemi Menuju Endemik</h1>
+                <div 
+                class="line"
+                data-aos="fade-right"
+                data-aos-duration="500"
+                data-aos-easing="ease-out"
+                data-aos-once = "false"
+                ></div>
+                <p id="description1">Sehat adalah sebuah komunitas yang menyediakan segala informasi mengenai Covid-19.</p>
+                <div class="cta">
+                    <a href="html/signup.html" data-aos="fade-in" data-aos-duration="800" data-aos-once = "false"><button class="signUp" id="registerNow">Daftar Sekarang</button></a>
+                    <a href="#feature"><button class="learnMore" data-aos="fade-in" data-aos-duration="800" data-aos-once = "false"> <span id="learnMore">Selengkapnya</span> </button></a>
+                </div>
+            </div>
+            <div class="right-section" 
+            data-aos="fade-left"
+            data-aos-duration="800"
+            data-aos-easing="ease-in"
+            data-aos-once = "false"
+            >
+                <img  src="assets/hero-image.png" alt="hero-image">
+            </div>
+        </div>
+    </div>
+    <!-- feature List -->
+    <div class="container2" id="feature">
+        <div class="feature-list-title">
+            <h1 data-aos="fade-in" data-aos-duration="800" data-aos-once="false" id="leadingFeature">Fitur Unggulan Kami</h1>
+            <p data-aos="fade-in" data-aos-duration="800" id="leadingFeatureDescription">Beberapa Fitur Unggulan yang kami miliki guna mempermudah perjalanan anda</p>
+        </div>
+        <div class="feature-list-content">
+            <div class="feature-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+                <div class="feature-icon">
+                    <object data="assets/online-linear.svg" type="image/svg+xml" class="online">online-linear</object>   
+                </div>
+
+                <div class="feature-explanation">
+                    <h2 id="onlineVaccine">Vaksinasi Online</h2>
+                    <p id="onlineVaccineDescription">Kini platform Sehat! telah melayani registrasi vaksinasi secara Online </p>
+                </div>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="20">
+                <div class="feature-icon">
+                    <object data="assets/en-linear.svg" type="image/svg+xml" class="english">english-linear</object>                  
+                </div>
+
+                <div class="feature-explanation">
+                    <h2 id="english">Bahasa Inggris</h2>
+                    <p id="englishDescription">Bahasa Inggris sudah bisa digunakan di platform sehat! Cara aksesnya di menu atas! </p>
+                </div>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="40">
+                <div class="feature-icon">
+                    <object data="assets/responsive-linear.svg" type="image/svg+xml" class="responsive">responsive-linear</object>
+                </div>
+
+                <div class="feature-explanation">
+                    <h2 id="webResponsive">Web Responsive</h2>
+                    <p id="webResponsiveDescription">Web kita juga sudah responsive lho! Bagi pengguna mobile tidak perlu khawatir!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- covid case -->
+    <div class="container3">
+        <div class="covid-case-img">
+            <img src="assets/covid-case-img.png" alt="Covid-case" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="0">
+        </div>
+        <div class="covid-case-explanation" data-aos="fade-left" data-aos-duration="1000">
+            <h1 class="covid-case-title" id="covidCase">KASUS COVID</h1>
+            <h1 id="currentCovidCases">Jumlah Kasus Covid Saat ini di Indonesia</h1>
+            <p id="currentCovidCasesDescription">
+                Jumlah kasus covid di Indonesia sudah mulai menurun.
+                Sementara itu, vaksinasi masih di sebarluaskan oleh
+                pemerintah ke berbagai daerah. 
+            </p>
+        </div>
+        <div class="covid-case-positive" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="20">
+            <h3>4,181,309</h3>
+            <div class="line"></div>
+            <div class="positive-text">
+                <div class="yellow-circle"></div>
+                <span id="positive">Positif</span>
+            </div>
+        </div>
+        <div class="covid-case-convalescent" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="20">
+            <h3>139,919</h3>
+            <div class="line"></div>
+            <div class="convalescent-text">
+                <div class="green-circle"></div>
+                <span id="recovered">Sembuh</span>
+            </div>
+        </div>
+        <div class="covid-case-died" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+            <h3>10,633</h3>
+            <div class="line"></div>
+            <div class="died-text">
+                <div class="red-circle"></div>
+                <span id="died">Meninggal</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- symptoms and precaution -->
+    <div class="container4">
+        <div class="symptoms-precaution-title" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="0">
+            <h1 id="symptomsTitle">Yuk, Kenali dan Cegah Gejala Covid!</h1>
+            <img src="assets/symtomps-precaution-linear.png" alt="symptoms-precaution-image" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="20">
+            <p id="symptomsDescription">Jika memiliki beberapa gejala dibawah ini segera hubungi dokter untuk mendapatkan jawaban</p>
+        </div>
+        <div class="symptoms-precaution-content">
+            <div class="symptoms">
+            <div class="symptoms-title">
+                <div class="circle-gradient"></div>
+                <h4 data-aos="fade-in" data-aos-duration="1000" data-aos-delay="0" id="covidSymptoms">Gejala-gejala Covid-19</h4>
+            </div>
+            <div class="symptoms-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="20">
+                <div class="symptoms-content">
+                    <img src="assets/fever.png" alt="fever">
+                    <span id="fever">Demam</span>
+                </div>
+                <div class="symptoms-content">
+                    <img src="assets/dry-cough.png" alt="fever">
+                    <span id="dryCough">Batuk Kering</span>
+                </div>
+                <div class="symptoms-content">
+                    <img src="assets/tired.png" alt="fever">
+                    <span id="tired">Kelelahan</span>
+                </div>
+                <div class="symptoms-content">
+                    <img src="assets/asthma.png" alt="fever">
+                    <span id="asthma">Sesak Nafas</span>
+                </div>
+            </div>
+        </div>
+        <div class="precaution">
+            <div class="precaution-title" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="0">
+                <div class="circle-gradient"></div>
+                <h4 id="precaution">Pencegahan Covid-19</h4>
+            </div>
+            <div class="precaution-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="20">
+                <div class="precaution-content">
+                    <img src="assets/hand-wash.png" alt="hand-wash">
+                    <span id="washHands">Cuci Tangan</span>
+                </div>
+                <div class="precaution-content">
+                    <img src="assets/social-distance.png" alt="social-distance">
+                    <span id="socialDistance">Jaga Jarak</span>
+                </div>
+                <div class="precaution-content">
+                    <img src="assets/vaccination.png" alt="vaccination">
+                    <span id="vaccination">Vaksinasi</span>
+                </div>
+                <div class="precaution-content">
+                    <img src="assets/mask.png" alt="mask">
+                    <span id="mask">Masker</span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- about us -->
+    <div class="container5">
+        <div class="about-us-explanation" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="0">
+            <h1 id="aboutUs">Tentang Kami</h1>
+            <p id="aboutUsDescription">Sehat! adalah sebuah platform informasi dan pelayanan seputar Covid-19</p>
+        </div>
+        <div class="about-us-img-1">
+            <img src="assets/about-us-1.png" alt="Covid-19" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="0">
+        </div>
+        <div class="about-us-img-2">
+            <img src="assets/about-us-2.png" alt="nurse" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="20">
+        </div>
+        <div class="about-us-img-3">
+            <img src="assets/about-us-3.png" alt="nurse1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="0">
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="container6">
+        <div class="footer-title">
+            <h1 id="footerTitle">Sudahkah anda mendaftar?</h1>
+            <a href="html/signup.html"><span id="footerCta">Daftar Sekarang</span> <img src="assets/arrow_forward.png" alt="arrow_forward"></a>
+        </div>
+        <div class="footer-navigation">
+            <ul>
+                <li><a href="index.html" id="footerHome">Beranda</a></li>
+                <li><a href="html/register-vaccinate.html" id="footerOnlineVacc">Vaksinasi Online</a></li>
+                <li><a href="html/check-status.html" id="footerCheckStatus">Cek Status</a></li>
+                <li><a href="html/login.html" id="footerLogin">Masuk</a></li>
+            </ul>
+        </div>
+        <div class="footer-socials">
+            <div class="social-medias">
+                <div class="social-media">
+                    <a href="https://www.facebook.com/"><img src="assets/facebook-linear.png" alt="Facebook"></a>
+                </div>
+                <div class="social-media">
+                    <a href="https://twitter.com/twitter"><img src="assets/tweet.png" alt="Twitter"></a>
+                </div>
+                <div class="social-media">
+                    <a href="https://www.instagram.com/"><img src="assets/instagram.png" alt="Instagram"></a>
+                </div>
+                <div class="social-media">
+                    <a href="https://mail.google.com/mail"><img src="assets/mail-linear.png" alt="Email"></a>
+                </div>
+                <div class="social-media">
+                    <a href="https://www.youtube.com/"><img src="assets/youtube-linear.png" alt="Youtube"></a>
+                </div>
+            </div>
+            <div class="copyright">©2021 Km Bisma. All Rights Reserved</div>
+        </div>
+    </div>
+    <script src="script/aos.js"></script>
+    <script> AOS.init();</script>
+    <script src="script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+.container3 {
+    display: grid;
+    grid-template-columns: 1.6fr 0.7fr 0.7fr 0.7fr;
+    grid-template-rows: 2.1fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "covid-case-img covid-case-explanation covid-case-explanation covid-case-explanation"
+        "covid-case-img covid-case-positive covid-case-convalescent covid-case-died";
+}
+
+.covid-case-img {
+    grid-area: covid-case-img;
+}
+
+.covid-case-explanation {
+    grid-area: covid-case-explanation;
+}
+
+.covid-case-positive {
+    grid-area: covid-case-positive;
+}
+
+.covid-case-convalescent {
+    grid-area: covid-case-convalescent;
+}
+
+.covid-case-died {
+    grid-area: covid-case-died;
+}
+
+// ------------------------------------------------------
+
+.container3 {
+    width: 85%;
+    margin: auto;
+    margin-top: 250px;
+}
+
+.covid-case-img {
+    margin: auto;
+}
+
+.covid-case-explanation {
+    margin: auto;
+
+    h1 {
+        &.covid-case-title {
+            background: $main-color-ver;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 18px;
+            padding-bottom: 30px;
+        }
+
+        padding-bottom: 30px;
+        font-size: 36px;
+        color: #000;
+        width: 500px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 35px;
+        width: 463px;
+        color: rgba($color: #000000, $alpha: .6);
+    }
+}
+
+.line {
+    width: 110px;
+    height: 3px;
+    background: $main-color-ver;
+}
+
+.covid-case-positive {
+    .line {
+        margin-top: 7px;
+    }
+
+    margin-top: 20px;
+
+    .positive-text {
+        @include flexbox(row, flex-start, center);
+        margin-top: 7px;
+
+        .yellow-circle {
+            width: 10px;
+            height: 10px;
+            border-radius: 50px;
+            background: #C4DA3A;
+        }
+
+        span {
+            padding-left: 10px;
+        }
+    }
+
+    // margin-left: 215px;
+    margin-left:69%;
+}
+
+.covid-case-convalescent {
+    .line {
+        margin-top: 7px;
+    }
+
+    margin-top: 20px;
+
+    .convalescent-text {
+        @include flexbox(row, flex-start, center);
+        margin-top: 7px;
+
+        .green-circle {
+            width: 10px;
+            height: 10px;
+            border-radius: 50px;
+            background: #3ADA8D;
+        }
+
+        span {
+            padding-left: 10px;
+        }
+    }
+
+    margin-left: 34%;
+}
+
+.covid-case-died {
+    .line {
+        margin-top: 7px;
+    }
+
+    margin-top: 20px;
+
+    .died-text {
+        @include flexbox(row, flex-start, center);
+        margin-top: 7px;
+
+        .red-circle {
+            width: 10px;
+            height: 10px;
+            border-radius: 50px;
+            background: #DA3A3A;
+        }
+
+        span {
+            padding-left: 10px;
+        }
+    }
+}
+
+@media(max-width: 1583px) {
+    .covid-case-positive {
+        margin-left: 50%;
+    }
+}
+
+@media(max-width: 1303px) {
+    .covid-case-positive {
+        margin-left: 30%;
+    }
+
+    .covid-case-convalescent {
+        margin-left: 15%;
+    }
+}
+
+@media(max-width: 1111px) {
+    .covid-case-positive {
+        margin-left: 0%;
+    }
+
+    .covid-case-convalescent {
+        margin-left: 0%;
+    }
+}
+
+@media(max-width: 1029px) {
+    .container3 {
+        display: grid;
+        grid-template-columns: 0.7fr 0.7fr 0.7fr;
+        grid-template-rows: 2.1fr 0.5fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "covid-case-explanation covid-case-explanation covid-case-explanation"
+            "covid-case-positive covid-case-convalescent covid-case-died";
+    }
+
+    .covid-case-img {
+        display: none;
+    }
+
+    .covid-case-positive {
+        margin-left: 55%;
+    }
+
+    .covid-case-convalescent {
+        margin-left: 25%;
+    }
+}
+
+@media(max-width: 675px) {
+
+    .covid-case-positive {
+        margin-left: 15%;
+        margin-top: 40px;
+    }
+
+    .covid-case-convalescent {
+        margin-left: 7%;
+        margin-top: 40px;
+    }
+
+    .covid-case-died {
+        margin-top: 40px;
+    }
+}
+
+@media(max-width: 675px) {
+
+    .covid-case-positive {
+        margin-left: 15%;
+        margin-top: 40px;
+    }
+
+    .covid-case-convalescent {
+        margin-left: 7%;
+        margin-top: 40px;
+    }
+
+    .covid-case-died {
+        margin-top: 40px;
+    }
+}
+
+@media(max-width: 542px) {
+    .container3 {
+        display: grid;
+        grid-template-columns: 0.7fr 0.7fr 0.7fr;
+        grid-template-rows: 2.1fr 0.5fr 0.5fr 0.5fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "covid-case-explanation covid-case-explanation covid-case-explanation"
+            "covid-case-positive covid-case-positive covid-case-positive"
+            "covid-case-convalescent covid-case-convalescent covid-case-convalescent"
+            "covid-case-died  covid-case-died  covid-case-died";
+    }
+
+    .covid-case-explanation {
+        h1 {
+            &.covid-case-title {
+                width: 200px;
+            }
+
+            font-size: 30px;
+            width: 300px;
+        }
+
+        p {
+            width: 300px;
+            font-size: 14px;
+        }
+    }
+
+    .covid-case-positive {
+        margin-left: 0;
+        margin: 40px auto 0px auto;
+    }
+
+    .covid-case-convalescent {
+        margin-left: 0;
+        margin: 40px auto 0px auto;
+    }
+
+    .covid-case-died {
+        margin: 40px auto 0px auto;
+    }
+}

@@ -1,0 +1,11 @@
+// Theme color variables
+$main-color-hor : linear-gradient(90deg, rgba(171, 33, 252, 1) 0%, rgba(41, 182, 211, 1) 100%);
+$main-color-ver : linear-gradient(180deg, rgba(171, 33, 252, 1) 0%, rgba(41, 182, 211, 1) 100%);
+$transparent-color: linear-gradient(180deg, rgba(171, 33, 252, 0.2) 0%, rgba(41, 182, 211, 0.2) 100%);
+
+@mixin flexbox($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

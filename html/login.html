@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="container10">
+        <div class="login-form">
+            <div class="navigation-login">
+                <div class="logo">
+                    <img src="../assets/logo.png" alt="logo sehat">
+                    <a href="../index.html"><span class="logo-text">Sehat!</span></a>
+                </div>
+                <div class="nav-button">
+                    <div class="language-dropdodwn">
+                        <div class="language-categories">
+                            <div class="select">
+                                <select name="language-categories" id="language-categories" onchange="getLanguageValue()">
+                                    <option value="INA">INA</option>
+                                    <option value="ENG">ENG</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="login-title">
+                <h3 id="loginLogin">MASUK</h3>
+                <h1 id="loginTitle">Masuk untuk mengakses seluruh Fitur</h1>
+            </div>
+
+            <div class="login-section">
+                <form action="">
+                    <div class="form-row">
+                        <label for="username" id="loginUsername">Nama Pengguna</label>
+                        <input type="text" name="username" placeholder="cth : John Applessed" id="loginInputUsername">
+                    </div>
+                    <div class="form-row">
+                        <label for="password" id="loginPassword">Kata Sandi</label>
+                        <input type="password" name="password" placeholder="••••••••••••">
+                    </div>
+                    <div class="form-row">
+                        <p id="loginNoAcc">Belum memilik akun? Klik 
+                            <a href="signup.html">Disini</a>
+                        </p>
+                        <button type="submit"><a href="../index.html" id="loginGo"> Masuk</a> </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="login-banner">
+            <h1 id="loginQuote">
+            <span>"</span>
+            Satu Komunitas, Satu Kesatuan, Satu Tujuan.
+            </h1>
+            <div class="login-banner-img">
+                <img src="../assets/boypng.png" alt="girl">
+            </div>
+        </div>  
+    </div>
+    <script src="../script/script3.js"></script>
+</body>
+</html>

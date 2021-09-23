@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Vaccinate</title>
+    <link rel="stylesheet" href="../css/main.css">
+    
+</head>
+<body>
+    <div class="container7" data-aos ="fade-in">
+        <div class="navigation-register">
+            <div class="logo">
+                <img src="../assets/logo.png" alt="logo sehat">
+                <a href="../index.html"><span class="logo-text">Sehat!</span></a>
+            </div>
+            <div class="navigation-items">
+                <ul>
+                    <a href="../index.html" id="registerHome"><li>Beranda</li></a>
+                    <a href="register-vaccinate.html" class="active" id="registerVacc"><li>Vaksinasi Online</li></a>
+                    <a href="check-status.html" id="registerCheck"><li>Cek Status</li></a>
+                </ul>
+            </div>
+            <div class="menu-dropdown" id="menu-dropdown">
+                <svg  viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.83333 12.75H14.1667C14.5562 12.75 14.875 12.4312 14.875 12.0417C14.875 11.6521 14.5562 11.3333 14.1667 11.3333H2.83333C2.44375 11.3333 2.125 11.6521 2.125 12.0417C2.125 12.4312 2.44375 12.75 2.83333 12.75ZM2.83333 9.20833H14.1667C14.5562 9.20833 14.875 8.88958 14.875 8.5C14.875 8.11042 14.5562 7.79167 14.1667 7.79167H2.83333C2.44375 7.79167 2.125 8.11042 2.125 8.5C2.125 8.88958 2.44375 9.20833 2.83333 9.20833ZM2.125 4.95833C2.125 5.34792 2.44375 5.66667 2.83333 5.66667H14.1667C14.5562 5.66667 14.875 5.34792 14.875 4.95833C14.875 4.56875 14.5562 4.25 14.1667 4.25H2.83333C2.44375 4.25 2.125 4.56875 2.125 4.95833Z" fill="url(#paint0_linear)"/>
+                    <defs>
+                    <linearGradient id="paint0_linear" x1="8.5" y1="4.25" x2="8.5" y2="12.75" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#AB21FC"/>
+                    <stop offset="1" stop-color="#29B6D3"/>
+                    </linearGradient>
+                    </defs>
+                    </svg>
+            </div>
+            <div class="dropdown-content" id="dropdown-content">
+                <a href="../index.html" class="active">Beranda</a>
+                <a href="register-vaccinate.html">Vaksinasi Online</a>
+                <a href="check-status.html">Cek Status</a>
+                <a href="login.html">Masuk</a>
+            </div>
+            <div class="nav-button">
+                <div class="login">
+                    <a href="login.html"><button> <span>Masuk</span> </button></a>
+                </div>
+                <div class="language-dropdodwn">
+                    <div class="language-categories">
+                        <div class="select">
+                            <select name="language-categories" id="language-categories" onchange="getLanguageValue()">
+                                <option value="INA">INA</option>
+                                <option value="ENG">ENG</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="register-vaccinate-title">
+            <h1 id="onlineVaccRegister">Daftar Vaksinasi Online</h1>
+            <span id="dir">Beranda / Vaksinasi Online</span>
+            <p id="onlineVaccDes">Vaksinasi tidak dikenakan biaya sepeser pun. Vaksinasi sudah terbukti aman untuk digunakan.</p>
+        </div>
+        <div class="register-vaccinate-form">
+            <form action="">
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="username" id="fullName">Nama Lengkap</label>
+                        <input type="text" name="username" placeholder="cth : John Aplessed" id="registerInputUsername">
+                    </div>
+                    <div class="form-column nik">
+                        <label for="nik">NIK</label>
+                        <input type="text" name="nik" placeholder="cth : 3242058457123" id="nik">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-column-sm">
+                        <label for="select-vaccinate" id="vaccineType">Jenis Vaksin</label>
+                        <div class="select-vaccinate">
+                            <select name="select-vaccinate" id="select-vaccinate">
+                                <option value="1" selected="selected" >Sinovac</option>
+                                <option value="2">Pzifer</option>
+                                <option value="3">Astrazeneca</option>
+                                <option value="4">Sinopharm</option>
+                                <option value="5">Moderna</option>
+                                <option value="6" id="vaksinMerah">Vaksin Merah Putih</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-column-sm ">
+                        <label for="select-facility" id="facility">Fasilitas Vaksin</label>
+                        <div class="select-facility">
+                            <select name="select-facility" id="select-facility">
+                                <option value="1" selected="selected" id="hospital">Rumah Sakit</option>
+                                <option value="2" id="publicHealthCenter">Puskesmas</option>
+                                <option value="3" id="clinic">Klinik</option>
+                                <option value="4" id="private">Pribadi</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-column phone">
+                        <label for="phone" id="activePhone">Nomor Telepon Aktif</label>
+                        <input type="number" name="phone" placeholder="cth : 089234817453" id="registerPhone">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="button"><button type="submit"><span id="submit">Kirim</span></button></div>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    <script src="../script/aos.js"></script>
+    <script> AOS.init();</script>
+    <script src="../script/script1.js"></script>
+</body>
+</html>

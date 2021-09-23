@@ -1,0 +1,158 @@
+.container4 {
+    display: grid;
+    grid-template-columns: 1.6fr 0.7fr 0.7fr 0.7fr;
+    grid-template-rows: 1.3fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "symptoms-precaution-title symptoms-precaution-title symptoms-precaution-title symptoms-precaution-title"
+        "symptoms-precaution-content symptoms-precaution-content symptoms-precaution-content symptoms-precaution-content";
+}
+
+.symptoms-precaution-title {
+    grid-area: symptoms-precaution-title;
+}
+
+.symptoms-precaution-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "symptoms symptoms symptoms symptoms"
+        "precaution precaution precaution precaution";
+    grid-area: symptoms-precaution-content;
+}
+
+.symptoms {
+    grid-area: symptoms;
+}
+
+.precaution {
+    grid-area: precaution;
+}
+
+// -----------------------------------------------------\
+
+.container4 {
+    width: 85%;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.symptoms-precaution-title {
+    width: 100%;
+    text-align: center;
+
+    h1 {
+        font-size: 50px;
+        background: $main-color-hor;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    img {
+        margin-top: 80px;
+    }
+
+    p {
+        width: 600px;
+        margin: 40px auto 0px auto;
+        color: rgba($color: #000000, $alpha: .6);
+    }
+
+    margin: auto;
+}
+
+.symptoms-precaution-content {
+    margin-top: 100px;
+    box-shadow: 1px 1px 10px rgba($color: #000000, $alpha: .3);
+    padding: 40px;
+    border-radius: 32px;
+
+    .symptoms-title,
+    .precaution-title {
+        @include flexbox(row, flex-start, center);
+
+        h4 {
+            margin-left: 26px;
+            font-size: 24px;
+        }
+
+        .circle-gradient {
+            width: 14px;
+            height: 14px;
+            background: $main-color-ver;
+            border-radius: 50px;
+        }
+    }
+
+    .symptoms-wrapper,
+    .precaution-wrapper {
+        @include flexbox(row, space-around, center);
+        flex-wrap: wrap;
+
+        .symptoms-content,
+        .precaution-content {
+
+            .left-wrapper,
+            .right-wrapper {
+                display: none;
+            }
+
+            background: $transparent-color;
+            width: 250px;
+            height: 220px;
+            border-radius: 16px;
+            text-align: center;
+            @include flexbox(column, center, center);
+            margin: 45px 15px 45px 0px;
+
+            span {
+                margin-top: 20px;
+                font-size: 24px;
+                font-weight: bold;
+                background: $main-color-ver;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1588px) {
+    .container4 {
+        grid-template-columns: 1.6fr 0.7fr 0.7fr 0.7fr;
+        grid-template-rows: 1fr 1.3fr;
+    }
+
+    .symptoms-precaution-content {
+        margin-top: 0px;
+    }
+}
+
+@media(max-width :734px) {
+    .container4 {
+        grid-template-columns: 1.6fr 0.7fr 0.7fr 0.7fr;
+        grid-template-rows: .8fr 1.3fr;
+        margin-top: 0px;
+    }
+
+    .symptoms-precaution-title {
+        img {
+            width: 250px;
+        }
+
+        p {
+            width: 250px;
+            margin: 40px auto 0px auto;
+            font-size: 12px;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+    }
+}

@@ -1,0 +1,504 @@
+.container7 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1.3fr 2.4fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "navigation-register navigation-register navigation-register navigation-register"
+        "register-vaccinate-title register-vaccinate-title register-vaccinate-title register-vaccinate-title"
+        "register-vaccinate-form register-vaccinate-form register-vaccinate-form register-vaccinate-form";
+}
+
+.navigation-register {
+    grid-area: navigation-register;
+}
+
+.register-vaccinate-title {
+    grid-area: register-vaccinate-title;
+}
+
+.register-vaccinate-form {
+    grid-area: register-vaccinate-form;
+}
+
+// -------------------------------------------
+
+.container7 {
+    width: 85%;
+    margin: auto;
+
+}
+
+.navigation-register {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "logo navigation-items navigation-items nav-button"
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.navigation-items {
+    grid-area: navigation-items;
+}
+
+.nav-button {
+    grid-area: nav-button;
+}
+
+// ------------------------------------------------------------------------
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+// header style
+.navigation-register {
+    @include flexbox(row, space-between, center);
+    width: 100%;
+    padding-top: 20px;
+
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        width: 160px;
+        background-color: #FCF7F7;
+        top: 100px;
+        right: 40px;
+        box-shadow: 1px 1px 10px rgba($color: #000000, $alpha: .3);
+        a{
+            display: block;
+            text-decoration: none;
+            margin-bottom: 10px;
+            text-align: center;
+            padding: 15px;
+            &:hover{
+                background: #c4c4c4;
+            }
+        }
+    }
+
+    .logo {
+        font-weight: bold;
+        font-size: 20px;
+        @include flexbox(row, flex-start, center);
+
+        .active {
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    img {
+        padding-right: 20px;
+    }
+
+    span {
+        display: inline-block;
+        background: $main-color-hor;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+
+    .navigation-items {
+        ul {
+            @include flexbox(row, flex-start, center);
+
+            a {
+                text-decoration: none;
+
+                &.active {
+                    background: $main-color-hor;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-weight: 600;
+                }
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    padding-left: 60px;
+                }
+
+                li {
+                    list-style: none;
+
+                }
+            }
+        }
+    }
+
+    .menu-dropdown {
+        display: none;
+        cursor: pointer;
+    }
+
+    .nav-button {
+        @include flexbox(row, center, center);
+
+        .login {
+            button {
+                width: 92px;
+                height: 45px;
+                border: none;
+                background: $transparent-color;
+                border-radius: 8px;
+                font-size: 16px;
+                cursor: pointer;
+
+                span {
+                    background-color: $main-color-ver;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .language-categories {
+            margin-left: 16px;
+            font-size: 13px;
+            padding: 13px 8px 13px 14px;
+            background: #fff;
+            border-radius: 8px;
+            position: relative;
+            background: $transparent-color;
+
+            .select {
+                width: 130%;
+                // background: url('arrow.png') no-repeat;
+                // background-position: 80% center;
+
+
+                select {
+                    background: transparent;
+                    line-height: 1;
+                    border: 0;
+                    padding: 0;
+                    border-radius: 0;
+                    width: 80%;
+                    position: relative;
+                    z-index: 10;
+                    font-size: 1em;
+                    background: $main-color-ver;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-weight: 600;
+                    border: none;
+
+
+                    #language-categories {
+                        option[value="INA"] {
+                            background-image: url(../../assets/Indoneian-flag.png);
+                        }
+
+                        option[value="ENG"] {
+                            background-image: url(../../assets/UK-flag.png);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.register-vaccinate-title {
+    margin-top: 60px;
+
+    h1 {
+        font-size: 48px;
+        background: $main-color-ver;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    span {
+        display: inline-block;
+        margin-top: 25px;
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+        color: rgba($color: #000000, $alpha: .6);
+        margin-top: 33px;
+        width: 410px;
+    }
+}
+
+.register-vaccinate-form {
+    margin-top: 40px;
+
+    form {
+        .form-row {
+            @include flexbox(row, flex-start, center);
+            flex-wrap: wrap;
+
+            &:nth-child(2) {
+                margin-top: 35px;
+            }
+
+            .form-column {
+                &.nik {
+                    margin-left: 5%;
+                }
+
+                &.phone {
+                    margin-left: 7%;
+                }
+
+                label {
+                    display: block;
+                    margin-bottom: 20px;
+                }
+
+                input {
+                    display: block;
+                    width: 590px;
+                    height: 52px;
+                    padding: 20px;
+                    box-sizing: border-box;
+                    border-radius: 16px;
+                    border: 1px solid rgba($color: #000000, $alpha: .3);
+                    &:focus{
+                        outline: none;
+                    }
+                }
+
+
+            }
+
+            .form-column-sm {
+                label {
+                    display: block;
+                    margin-bottom: 20px;
+
+                    &#facility {
+                        margin-left: 14%;
+                    }
+                }
+
+                .select-vaccinate {
+                    select {
+                        width: 277px;
+                        height: 52px;
+                        border-radius: 16px;
+                        border: 1px solid rgba($color: #000000, $alpha: .3);
+                        padding: 0px 20px;
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                }
+
+                .select-facility {
+                    margin-left: 12%;
+
+                    select {
+                        width: 277px;
+                        height: 52px;
+                        border-radius: 16px;
+                        border: 1px solid rgba($color: #000000, $alpha: .3);
+                        padding: 0px 20px;
+
+                    }
+                }
+
+                input {
+                    width: 277px;
+                    height: 52px;
+                    border-radius: 16px;
+                    border: 1px solid rgba($color: #000000, $alpha: .3)
+                }
+            }
+
+            .button {
+                margin-top: 60px;
+
+                button {
+                    padding: 17px 30px 17px 30px;
+                    font-size: 18px;
+                    box-sizing: border-box;
+                    border-radius: 16px;
+                    border: none;
+                    background: $main-color-hor;
+                    cursor: pointer;
+
+                    span {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:1433px) {
+    .register-vaccinate-form {
+        form {
+            .form-row {
+                &:nth-child(2) {
+                    margin-top: 0px;
+                }
+
+                .form-column {
+                    &.nik {
+                        margin-left: 0;
+                    }
+
+                    &.phone {
+                        margin-left: 0%;
+                    }
+
+                    label {
+                        display: block;
+                        margin-bottom: 10px;
+                    }
+
+                    input {
+                        display: block;
+                        width: 590px;
+                        height: 52px;
+                        padding: 20px;
+                        box-sizing: border-box;
+                        border-radius: 16px;
+                        border: 1px solid rgba($color: #000000, $alpha: .3);
+                        margin-bottom: 20px;
+                    }
+
+
+                }
+
+                .form-column-sm {
+                    label {
+                        display: block;
+                        margin-bottom: 10px;
+
+                        &#facility {
+                            margin-left: 14%;
+                        }
+
+                    }
+
+                    .select-vaccinate {
+                        select {
+                            width: 277px;
+                            height: 52px;
+                            border-radius: 16px;
+                            border: 1px solid rgba($color: #000000, $alpha: .3);
+                            padding: 0px 20px;
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    .select-facility {
+                        margin-left: 12%;
+
+                        select {
+                            width: 277px;
+                            height: 52px;
+                            border-radius: 16px;
+                            border: 1px solid rgba($color: #000000, $alpha: .3);
+                            padding: 0px 20px;
+                            margin-bottom: 20px;
+
+                        }
+                    }
+
+                    input {
+                        width: 277px;
+                        height: 52px;
+                        border-radius: 16px;
+                        border: 1px solid rgba($color: #000000, $alpha: .3);
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 873px) {
+
+    .navigation-register {
+        .menu-dropdown {
+            display: block;
+
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .navigation-items {
+            display: none;
+        }
+
+        .nav-button {
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 674px) {
+    .register-vaccinate-title{
+        p {
+            width: 300px;
+            font-size: 12px;
+        }
+    }
+    .register-vaccinate-form {
+        form {
+            .form-row {
+                @include flexbox(column, flex-start, flex-start);
+                .form-column {
+                    input {
+                        width: 300px;
+                        height: 30px;
+                    }
+
+                    label {
+                        margin: 15px 0px;
+                    }
+                }
+
+                .form-column-sm {
+                    .select-facility {
+                        margin-left: 0%;
+                        select {
+                            width: 277px;
+                            height: 42px;
+                            border-radius: 16px;
+                            border: 1px solid rgba($color: #000000, $alpha: .3);
+                            padding: 0px 20px;
+                        }
+                    }
+                    .select-vaccinate {
+                        select {
+                            width: 277px;
+                            height: 42px;
+                            border-radius: 16px;
+                            border: 1px solid rgba($color: #000000, $alpha: .3);
+                            padding: 0px 20px;
+                        }
+                    }
+                    label {
+                        margin-top: 20px;
+                        &#facility {
+                            margin-left: 0;
+                        }
+                    }
+
+                    
+                }
+                }
+            }
+        }
+}

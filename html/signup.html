@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="container9">
+        <div class="sign-up-form">
+            <div class="navigation-sign-up">
+                <div class="logo">
+                    <img src="../assets/logo.png" alt="logo sehat">
+                    <a href="../index.html"><span class="logo-text">Sehat!</span></a>
+                </div>
+                <div class="nav-button">
+                    <div class="language-dropdodwn">
+                        <div class="language-categories">
+                            <div class="select">
+                                <select name="language-categories" id="language-categories" onchange="getLanguageValue()">
+                                    <option value="INA">INA</option>
+                                    <option value="ENG">ENG</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sign-up-title">
+                <h3 id="signup">DAFTAR</h3>
+                <h1 id="signUpTitle">Bergabung Bersama Kami di <span>Sehat!</span></h1>
+            </div>
+
+            <div class="sign-up-section">
+                <form action="">
+                    <div class="form-row">
+                        <label for="username" id="signUpFullName">Nama Pengguna</label>
+                        <input type="text" name="username" placeholder="cth : John Applessed" id="inputFullName">
+                    </div>
+                    <div class="form-row">
+                        <label for="email" id="signUpEmail">Email</label>
+                        <input type="email" name="email" placeholder="cth : johnapplesssed@gmail.com" id="inputEmail">
+                    </div>
+                    <div class="form-row">
+                        <label for="password" id="password">Kata Sandi</label>
+                        <input type="password" name="password" placeholder="••••••••••••" >
+                    </div>
+                    <div class="form-row">
+                        <p id="alreadyHaveAcc">Sudah Punya akun? Klik <a href="login.html">disini</a></p>
+                        <button type="submit"><a href="login.html" id="signupButton">Daftar</a></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="sign-up-banner">
+            <h1 id="signUpQuote">
+            <span>"</span>
+            Wujudkan Indonesia Bebas Covid-19!
+            </h1>
+            <div class="sign-up-banner-img">
+                <img src="../assets/girl.png" alt="girl">
+            </div>
+        </div>
+    </div>
+    <script src="../script/script4.js"></script>
+</body>
+</html>
